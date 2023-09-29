@@ -33,6 +33,7 @@ export const SignUpForm = () => {
     validationSchema: validationSchema,
     onSubmit: values => {
       setUserData(values);
+      console.log(userData);
     },
   });
 
