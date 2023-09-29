@@ -4,16 +4,26 @@ import FaceIcon from '@mui/icons-material/Face';
 import LockIcon from '@mui/icons-material/Lock';
 import Switch from '@mui/material/Switch';
 import { useState } from 'react';
+import { useNavigate } from 'react-router';
 
 import { StyledFormWrapper } from './LoginPage.styled';
 import { SignUpForm } from 'components/LoginSignUp/signup';
 import { LoginForm } from 'components/LoginSignUp/login';
+import { type } from '@testing-library/user-event/dist/type';
 
-const AuthForm = () => {
-  const [checked, setChecked] = useState(false);
+const AuthPage = () => {
+  const navigate = useNavigate();
+  const [checked, setChecked] = useState(type === 'login');
 
   const handleChange = event => {
-    setChecked(event.target.checked);
+    const isChecked = event.target.checked;
+    setChecked(isChecked);
+
+    if (isChecked) {
+      navigate('/login');
+    } else {
+      navigate('/register');
+    }
   };
 
   return (
@@ -48,4 +58,4 @@ const AuthForm = () => {
   );
 };
 
-export default AuthForm;
+export default AuthPage;

@@ -20,7 +20,7 @@ export const LoginForm = () => {
   };
   return (
     <div>
-      <p>
+      <div>
         <TextField
           id="standard-basic"
           label="Email"
@@ -28,8 +28,8 @@ export const LoginForm = () => {
           fullWidth
           size="small"
         />
-      </p>
-      <p>
+      </div>
+      <div>
         <FormControl sx={{ width: '100%' }} variant="standard">
           <InputLabel htmlFor="standard-adornment-password">
             Password
@@ -50,13 +50,13 @@ export const LoginForm = () => {
             }
           />
         </FormControl>
-      </p>
+      </div>
       <br></br>
-      <p>
+      <div>
         <Button fullWidth variant="contained" startIcon={<LoginIcon />}>
           log in
         </Button>
-      </p>
+      </div>
     </div>
   );
 };
