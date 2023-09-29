@@ -13,10 +13,6 @@ import { useState } from 'react';
 export const LoginForm = () => {
   const [showPassword, setShowPassword] = useState(false);
 
-  // const [userNameInput, setUserNameInput] = useState('');
-  // const [userEmail, setUserEmail] = useState('');
-  // const [userPassword, setUserPassword] = useState('');
-
   const handleClickShowPassword = () => setShowPassword(show => !show);
 
   const handleMouseDownPassword = event => {

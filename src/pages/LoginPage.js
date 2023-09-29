@@ -6,8 +6,8 @@ import Switch from '@mui/material/Switch';
 import { useState } from 'react';
 
 import { StyledFormWrapper } from './LoginPage.styled';
-import { SignUpForm } from 'components/LoginSignUoForm/signup';
-import { LoginForm } from 'components/LoginSignUoForm/login';
+import { SignUpForm } from 'components/LoginSignUp/signup';
+import { LoginForm } from 'components/LoginSignUp/login';
 
 const AuthForm = () => {
   const [checked, setChecked] = useState(false);
