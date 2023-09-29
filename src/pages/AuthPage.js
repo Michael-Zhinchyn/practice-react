@@ -3,23 +3,24 @@ import Chip from '@mui/material/Chip';
 import FaceIcon from '@mui/icons-material/Face';
 import LockIcon from '@mui/icons-material/Lock';
 import Switch from '@mui/material/Switch';
+import { useLocation, useNavigate } from 'react-router';
 import { useState } from 'react';
-import { useNavigate } from 'react-router';
-
 import { StyledFormWrapper } from './LoginPage.styled';
 import { SignUpForm } from 'components/LoginSignUp/signup';
 import { LoginForm } from 'components/LoginSignUp/login';
-import { type } from '@testing-library/user-event/dist/type';
 
 const AuthPage = () => {
+  const location = useLocation();
   const navigate = useNavigate();
-  const [checked, setChecked] = useState(type === 'login');
+  const isLoginForm = location.pathname.includes('/login');
+  const [checked, setChecked] = useState(isLoginForm);
 
-  const handleChange = event => {
-    const isChecked = event.target.checked;
-    setChecked(isChecked);
+  const handleChange = () => {
+    const newCheckedState = !checked;
+    setChecked(newCheckedState);
 
-    if (isChecked) {
+    // Змінюємо маршрут на основі нового стану чекбокса
+    if (newCheckedState) {
       navigate('/login');
     } else {
       navigate('/register');
