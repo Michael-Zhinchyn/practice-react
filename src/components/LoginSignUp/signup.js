@@ -104,8 +104,6 @@ export const SignUpForm = () => {
           }}
         />
 
-        <br></br>
-        <br></br>
         <Button
           type="submit"
           fullWidth
