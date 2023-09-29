@@ -45,7 +45,7 @@ export const SignUpForm = () => {
         />
       </p>
       <p>
-        <FormControl sx={{ m: 1, width: '100%' }} variant="standard">
+        <FormControl sx={{ width: '100%' }} variant="standard">
           <InputLabel htmlFor="standard-adornment-password">
             Password
           </InputLabel>
@@ -67,7 +67,7 @@ export const SignUpForm = () => {
         </FormControl>
       </p>
       <p>
-        <FormControl sx={{ m: 1, width: '100%' }} variant="standard">
+        <FormControl sx={{ width: '100%' }} variant="standard">
           <InputLabel htmlFor="standard-adornment-password">
             Repeat Password
           </InputLabel>
@@ -88,6 +88,7 @@ export const SignUpForm = () => {
           />
         </FormControl>
       </p>
+      <br></br>
       <p>
         <Button fullWidth variant="contained" startIcon={<VpnKeyIcon />}>
           sign up

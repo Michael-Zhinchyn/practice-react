@@ -34,7 +34,7 @@ export const LoginForm = () => {
         />
       </p>
       <p>
-        <FormControl sx={{ m: 1, width: '100%' }} variant="standard">
+        <FormControl sx={{ width: '100%' }} variant="standard">
           <InputLabel htmlFor="standard-adornment-password">
             Password
           </InputLabel>
@@ -55,6 +55,7 @@ export const LoginForm = () => {
           />
         </FormControl>
       </p>
+      <br></br>
       <p>
         <Button fullWidth variant="contained" startIcon={<LoginIcon />}>
           log in
